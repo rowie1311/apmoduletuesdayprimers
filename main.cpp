@@ -2,9 +2,11 @@
 using namespace std;
 int main()
 {
+  
   int l_case=0, u_case=0, digit=0, special=0;
   string str;
-  cout<<"Enter input string."<<endl;
+  while(1) {
+  cout<<"Enter Desired Password\n(Must Include A Capital, Special Character And Number): "<<endl;
   
   cin>>str;
   int l=str.length(),i;
@@ -21,13 +23,23 @@ int main()
       special=1;  
   }
   
-  if(l_case && u_case && digit && special && l>=8)
+  if(l_case && u_case && digit && special && l>=8) 
+  {
     cout<<"Strong password."<<endl;
+    break;
+  }
   else if((l_case+u_case+digit+special>=3) && l>=6)
+  {
     cout<<"Moderate password"<<endl;
-  else
-    cout<<"Weak password"<<endl;
+    break;
+  }
+  else 
+  {
+  
+    cout<<"Password Too Weak; Try Again. Make Sure To Include Special Characters And Numbers "<<endl;
+  }
+    
+  }
     
   
-  return 0;
-}
+};
