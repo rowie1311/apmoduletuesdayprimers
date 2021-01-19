@@ -16,7 +16,7 @@ int removeEmployee(string employees[], string r, int s) {
         s--;
         cout << "\nThere are "<< s << " employees";
         for (int i = 0 ; i < s; i++) {
-          cout<< "\n" << e[i];
+          cout<< "\n" << employees[i];
         }
   return 0;
 };
