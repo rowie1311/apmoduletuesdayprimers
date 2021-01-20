@@ -8,7 +8,7 @@ int main() {
 
 
 string usernameinput,passinput;
-int attempts = 3;
+int attempts = 3;//make a var for your attempts, mine has 3 attempts so I've set it to 3. This will countdown with every incorrect validation 
   while(1) {
   cout << "\nPlease Enter Your Username And Password\n\n";
 
@@ -18,7 +18,7 @@ int attempts = 3;
   cin>>passinput;
   
 
-    string username[]={"mike","casper","rowan"};
+    string username[]={"mike@ada.ac.uk","casper@ada.ac.uk","rowan.ada.ac.uk"};
     string password[]={"1234","1212","8008"};
   
   
@@ -29,11 +29,11 @@ int attempts = 3;
       {
         
         cout << "Welcome! " << username[i];
-        return 0;
+        return 0;//create if statement starting with the 'happy path'. Return 0 so it'll end the program 
         
       }
       
-      else if (usernameinput != username[i] && passinput != password[i] && attempts == 1)
+      else if (usernameinput != username[i] && passinput != password[i] && attempts == 1) //this is the 'run out of attempts' path that 'locks' or more closes the program (Could impress mike by making a sleepnow function like for thursday so its locked for 5mins instead.) same as if the username and password are incorrect but add attempts == 1  
       {
         cout << "Failed To Authenticate After 3 Attempts, Please Restart Program";
         return 0;
@@ -43,8 +43,8 @@ int attempts = 3;
       {
         
         cout<<"please enter correct username and password\n"<<endl;
-        attempts--;
-          cout << "You Have " << attempts << " Attempts Out Of 3 Remaining. ";
+        attempts--;//make sure to minus the attempts each time down here 
+          cout << "You Have " << attempts << " Attempts Out Of 3 Remaining. ";//lil cout to show user attempts remaining
           break;
       
       }
